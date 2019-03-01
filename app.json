@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "bbdnepal",
+    "name": "bbdnepal_v1",
     "description": "This project is really great.",
-    "slug": "bbdnepal",
+    "slug": "bbdnepal_v1",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],
