@@ -16,18 +16,23 @@ import Header from "../shared/Head";
 import Footer from "../shared/Foot";
 
 import Slider from "./Slider";
+import WelcomeSection from "./WelcomeSection";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default class MainScreen extends Component {
   render() {
     return (
-      <Container>
+     <Container>
+        <ScrollView>
         <Header {...this.props} />
         <Content style={{ backgroundColor: "#d5d5d6" }}>
           <Slider />
           <Button block style={styles.button}>
             <Text>Join Us</Text>
           </Button>
+        <WelcomeSection />
         </Content>
+        </ScrollView>
         <Footer />
       </Container>
     );
