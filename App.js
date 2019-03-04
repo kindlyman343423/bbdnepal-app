@@ -5,6 +5,12 @@ import {createDrawerNavigator, createAppContainer } from 'react-navigation';
 import { Font, AppLoading } from "expo";
 
 import MainScreen from './Components/MainScreen';
+import AboutUsScreen from './Components/AboutUsScreen';
+import OurServiceScreen from './Components/OurServiceScreen';
+import LegalNewsScreen from './Components/LegalNewsScreen';
+import CareerScreen from './Components/CareerScreen';
+import FAQScreen from './Components/FAQScreen';
+import ContactUsScreen from './Components/ContactUsScreen';
 
 export default class App extends React.Component {
 
@@ -34,9 +40,15 @@ export default class App extends React.Component {
 }
 
 const RootDrawerNavigator = createDrawerNavigator({
-  Main: MainScreen,
+  Home: MainScreen,
+  AboutUs: AboutUsScreen,
+  OurService: OurServiceScreen,
+  LegalNews: LegalNewsScreen,
+  Career: CareerScreen,
+  FAQ: FAQScreen,
+  ContactUs: ContactUsScreen,
 },{
-  initialRouteName: 'Main',
+  initialRouteName: 'Home'
 })
 
 const DrawerNav = createAppContainer(RootDrawerNavigator);
