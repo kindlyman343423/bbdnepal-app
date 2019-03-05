@@ -13,10 +13,10 @@ export default class MembershipPlan extends Component {
      <Body style={[styles.grayBackground,{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
    
        <CardItem style={{flex: 1}}>
-       <Icon name="question-circle" style={{fontSize: 80}}/>
+       <Icon name="question" style={{fontSize: 80}}/>
        </CardItem>
        <CardItem style={{flex: 1}}>
-       <Icon name="file-markdown" style={{fontSize: 80}}/>
+       <Icon name="question" style={{fontSize: 80}}/>
        </CardItem>
        <CardItem style={{flex: 1}}>
        <Icon name="cash" style={{fontSize: 80}}/>
