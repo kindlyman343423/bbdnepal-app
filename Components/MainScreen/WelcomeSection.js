@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#122e8c",
-    marginBottom: 5
   },
   heading: {
     fontSize: 15,

@@ -18,6 +18,7 @@ import Footer from "../shared/Foot";
 import Slider from "./Slider";
 import WelcomeSection from "./WelcomeSection";
 import { ScrollView } from "react-native-gesture-handler";
+import MembershipPlan from "./MembershipPlan";
 
 export default class MainScreen extends Component {
   render() {
@@ -31,6 +32,7 @@ export default class MainScreen extends Component {
             <Text>Join Us</Text>
           </Button>
         <WelcomeSection />
+        <MembershipPlan />
         </Content>
         </ScrollView>
         <Footer />
