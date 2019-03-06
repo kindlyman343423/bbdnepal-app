@@ -17,8 +17,8 @@ class ContactUsScreen extends Component {
   render() {
     return (
       <Container>
-        <ScrollView>
           <Head {...this.props} />
+        <ScrollView>
           <Content>
             <Card>
               <CardItem>

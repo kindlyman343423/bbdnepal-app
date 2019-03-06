@@ -24,8 +24,8 @@ export default class MainScreen extends Component {
   render() {
     return (
      <Container>
-        <ScrollView>
         <Header {...this.props} />
+        <ScrollView>
         <Content style={{ backgroundColor: "#d5d5d6" }}>
           <Slider />
           <Button block style={styles.button}>
@@ -35,7 +35,6 @@ export default class MainScreen extends Component {
         <MembershipPlan />
         </Content>
         </ScrollView>
-        <Footer />
       </Container>
     );
   }
