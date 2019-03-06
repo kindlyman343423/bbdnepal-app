@@ -6,17 +6,32 @@ import { ScrollView } from "react-native-gesture-handler";
 import Head from "../shared/Head";
 import GoogleMap from "./GoogleMap";
 import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
 
 class ContactUsScreen extends Component {
+  
+  static navigationOptions = {
+    drawerLabel: "Contact Us"
+  };
+
   render() {
     return (
       <Container>
         <ScrollView>
           <Head {...this.props} />
           <Content>
-            {/* <GoogleMap /> */}
             <Card>
               <CardItem>
+            <GoogleMap />
+              </CardItem>
+            </Card>
+            <Card>
+              <CardItem>
+                <ContactInfo />
+              </CardItem>
+            </Card>
+            <Card>
+              <CardItem style={{flex: 1}}>
                 <ContactForm flexContact={styles.contact}/>
               </CardItem>
             </Card>

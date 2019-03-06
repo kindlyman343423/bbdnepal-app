@@ -12,17 +12,13 @@ class GoogleMap extends Component {
     this.state = {
       isMapReady: false,
       region: {
-        latitude: 47.6062,
-        longitude: 122.3321,
+        latitude: 27.717245,
+        longitude: 85.323959,
         latitudeDelta: 0.02,
         longitudeDelta: 0.02
       }
     };
   }
-
-  static navigationOptions = {
-    drawerLabel: "Contact Us"
-  };
 
   onMapLayout = () => {
     this.setState({ isMapReady: true });
@@ -30,8 +26,7 @@ class GoogleMap extends Component {
 
   render() {
     return (
-            <Card>
-              <CardItem>
+
                 <MapView
                   onPress={e => console.log(e.nativeEvent)}
                   style={styles.map}
@@ -54,8 +49,6 @@ class GoogleMap extends Component {
                     />
                   )}
                 </MapView>
-              </CardItem>
-            </Card>
     );
   }
 }
@@ -70,7 +63,7 @@ const styles = StyleSheet.create({
   },
   map: {
     flex: 1,
-    height: height / 4,
+    height: height/4,
     width: width
   }
 });
