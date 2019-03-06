@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Container } from "native-base";
+import Head from "./shared/Head";
 
 class OurServiceScreen extends Component {
 
@@ -9,9 +10,9 @@ class OurServiceScreen extends Component {
 
   render() {
     return (
-      <View>
-        <Text> OurServiceScreen </Text>
-      </View>
+      <Container>
+        <Head {...this.props}/>
+      </Container>
     )
   }
 }

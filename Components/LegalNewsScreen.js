@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React, { Component } from "react";
+import { Container } from "native-base";
+import Head from "./shared/Head";
 
 class LegalNewsScreen extends Component {
-
   static navigationOptions = {
-    drawerLabel: 'Legal News',
+    drawerLabel: "Legal News"
   };
 
   render() {
     return (
-      <View>
-        <Text> LegalNewsScreen </Text>
-      </View>
-    )
+      <Container>
+        <Head {...this.props} />
+      </Container>
+    );
   }
 }
 
-export default LegalNewsScreen
+export default LegalNewsScreen;

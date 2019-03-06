@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import {Container} from 'native-base'
+import Head from './shared/Head'
 
 class FAQScreen extends Component {
   render() {
     return (
-      <View>
-        <Text> FAQScreen </Text>
-      </View>
+      <Container>
+        <Head {...this.props}/>
+      </Container>
     )
   }
 }
