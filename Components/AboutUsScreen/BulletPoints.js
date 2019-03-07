@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Container, Card, CardItem, Content } from "native-base";
-import { ScrollView } from "react-native-gesture-handler";
-
-import Head from "./shared/Head";
 
 const data = [
   "This company is established by Nepalese investment only.",
@@ -20,11 +17,7 @@ const data = [
   "We are purely established as service Provider Company. We are not networking company and we suggest every one not to get involved with us influenced by any kind of greed or other such thinking."
 ];
 
-class AboutUsScreen extends Component {
-  static navigationOptions = {
-    drawerLabel: "About Us"
-  };
-
+class BulletPoints extends Component {
   renderBullets = (points, index) => {
     return (
       <CardItem key={index} style={{ flexDirection: "row" }}>
@@ -36,35 +29,28 @@ class AboutUsScreen extends Component {
 
   render() {
     return (
-      <Container>
-        <Head {...this.props} />
-        <ScrollView>
-          <Content>
-            <Card>
-              <CardItem header>
-                <Text style={styles.title}>About Us</Text>
-              </CardItem>
-              <CardItem>
-                <Text>
-                  BBD International Pvt. Ltd. is a modified name of a private
-                  company which was registered in 2065 BS according to company
-                  law 2063 B.S. It is a unique and successful company that has
-                  been doing different kind of work and providing different king
-                  of facilities. Various types of business are being operated
-                  under this company. Few of them are co-operatives, Real state,
-                  Mart, Consultancy and other large of small business.
-                </Text>
-              </CardItem>
-              <CardItem>
-                <Text>
-                  We are also aiming to transform this company to public company
-                </Text>
-              </CardItem>
-              {data.map((item, index) => this.renderBullets(item, index))}
-            </Card>
-          </Content>
-        </ScrollView>
-      </Container>
+      <Card>
+        <CardItem header>
+          <Text style={styles.title}>About Us</Text>
+        </CardItem>
+        <CardItem>
+          <Text>
+            BBD International Pvt. Ltd. is a modified name of a private company
+            which was registered in 2065 BS according to company law 2063 B.S.
+            It is a unique and successful company that has been doing different
+            kind of work and providing different king of facilities. Various
+            types of business are being operated under this company. Few of them
+            are co-operatives, Real state, Mart, Consultancy and other large of
+            small business.
+          </Text>
+        </CardItem>
+        <CardItem>
+          <Text>
+            We are also aiming to transform this company to public company
+          </Text>
+        </CardItem>
+        {data.map((item, index) => this.renderBullets(item, index))}
+      </Card>
     );
   }
 }
@@ -76,4 +62,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AboutUsScreen;
+export default BulletPoints;
