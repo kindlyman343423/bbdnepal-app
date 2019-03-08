@@ -48,7 +48,7 @@ const RootDrawerNavigator = createDrawerNavigator({
   FAQ: FAQScreen,
   ContactUs: ContactUsScreen,
 },{
-  initialRouteName: 'AboutUs'
+  initialRouteName: 'Home'
 })
 
 const DrawerNav = createAppContainer(RootDrawerNavigator);

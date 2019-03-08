@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Text, Card, CardItem, Body, Icon, Content } from "native-base";
 
+import FAIcons from 'react-native-vector-icons/FontAwesome';
+
 
 export default class MembershipPlan extends Component {
   render() {
@@ -13,18 +15,18 @@ export default class MembershipPlan extends Component {
      <Body style={[styles.grayBackground,{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
    
        <CardItem style={{flex: 1}}>
-       <Icon name="question" style={{fontSize: 80}}/>
+       <FAIcons name="question-circle" style={{fontSize: 80}}/>
        </CardItem>
        <CardItem style={{flex: 1}}>
-       <Icon name="question" style={{fontSize: 80}}/>
+       <FAIcons name="file-word-o" style={{fontSize: 80}}/>
        </CardItem>
        <CardItem style={{flex: 1}}>
-       <Icon name="cash" style={{fontSize: 80}}/>
+       <FAIcons name="money" style={{fontSize: 80}}/>
        </CardItem>
 
      </Body>
      <Body style={[styles.grayBackground,{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
-       <Text style={{flex: 1}}>1. Personal Members</Text>
+       <Text style={[styles.grayBackground,{flex: 1}]}>1. Personal Members</Text>
        <Text style={{flex: 1}}>2. Corporate Members</Text>
        <Text style={{flex: 1}}>3. VIP Members</Text>
      </Body>
