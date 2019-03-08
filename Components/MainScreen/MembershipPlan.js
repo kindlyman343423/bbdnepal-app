@@ -9,10 +9,10 @@ export default class MembershipPlan extends Component {
   render() {
     return (
      <Card>
-     <CardItem style={styles.grayBackground} header>
-     <Text style={[styles.title, {textAlignVertical: "center",textAlign: "center"}]}> Different Membership Plan at BBD International </Text>
+     <CardItem header>
+     <Text style={styles.title}>Different Membership Plan at BBD International </Text>
      </CardItem>
-     <Body style={[styles.grayBackground,{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
+     <Body style={[{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
    
        <CardItem style={{flex: 1}}>
        <FAIcons name="question-circle" style={{fontSize: 80}}/>
@@ -25,8 +25,8 @@ export default class MembershipPlan extends Component {
        </CardItem>
 
      </Body>
-     <Body style={[styles.grayBackground,{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}]}>
-       <Text style={[styles.grayBackground,{flex: 1}]}>1. Personal Members</Text>
+     <Body style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginLeft: 15, marginBottom: 10}}>
+       <Text style={{flex: 1}}>1. Personal Members</Text>
        <Text style={{flex: 1}}>2. Corporate Members</Text>
        <Text style={{flex: 1}}>3. VIP Members</Text>
      </Body>
