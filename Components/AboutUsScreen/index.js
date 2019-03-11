@@ -9,6 +9,28 @@ import BulletPoints from "./BulletPoints";
 import Members from "./Members";
 
 class AboutUsScreen extends Component {
+
+  state = {
+    heading: "Our members",
+    cards: [
+      {
+        title: "Ramhari Dhital",
+        image: "../../assets/images/member1.jpg",
+        desc: "Ramhari Dhital is known as a success man in finance industry in nepal. who protects his client’s interests as though they were his own."
+      },
+      {
+        title: "Mrs. Tulsi Dhital",
+        image: "../../assets/images/member2.jpg",
+        desc: "Mrs. Tulsi Dhital  is responsible for the day to day operations or an organization. She could be thought of as the second in command behind the Chairman or CEO."
+      },
+      {
+        title: "Mr. Tej Bdr. Karki",
+        image: "../../assets/images/member3.jpg",
+        desc: "James M. Beck was a member of the Republican Party, who served as U.S. Solicitor General and U.S. Representative from Pennsylvania."
+      },
+    ]
+  }
+
   static navigationOptions = {
     drawerLabel: "About Us"
   };
@@ -20,7 +42,7 @@ class AboutUsScreen extends Component {
         <ScrollView>
           <Content>
             <BulletPoints />
-              <Members />
+              <Members heading={this.state.heading} cards={this.state.cards}/>
           </Content>
         </ScrollView>
       </Container>
