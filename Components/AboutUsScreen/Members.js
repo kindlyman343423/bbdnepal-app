@@ -8,7 +8,7 @@ class Members extends Component {
     return (
       <Card>
         <CardItem header>
-          <Text>{this.props.heading}</Text>
+          <Text style={styles.title}>{this.props.heading}</Text>
         </CardItem>
 
      {this.props.cards && this.props.cards.map((member, i) => (
@@ -16,7 +16,7 @@ class Members extends Component {
                <Content key={i}>
                <CardItem cardBody>
                  <Image
-                   source={require(`../../assets/images/member1.jpg`)}
+                   source={{uri: `${member.image}`}}
                    style={styles.image}
                  />
                </CardItem>
@@ -41,7 +41,11 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     height: 200,
     width: 200
-  }
+  },
+  title: {
+    fontSize: 20,
+    color: "#122e8c"
+  },
 });
 
 export default Members;

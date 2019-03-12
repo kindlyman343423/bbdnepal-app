@@ -21,31 +21,27 @@ import { ScrollView } from "react-native-gesture-handler";
 import MembershipPlan from "./MembershipPlan";
 import OurPartners from "../AboutUsScreen/Members";
 
-state = {
-  heading: "Our partners",
-  cards: [
-    {
-      title: "Ramhari Dhital",
-      image: "../../assets/images/member1.jpg",
-      desc: "Ramhari Dhital is known as a success man in finance industry in nepal. who protects his client’s interests as though they were his own."
-    },
-    {
-      title: "Mrs. Tulsi Dhital",
-      image: "../../assets/images/member2.jpg",
-      desc: "Mrs. Tulsi Dhital  is responsible for the day to day operations or an organization. She could be thought of as the second in command behind the Chairman or CEO."
-    },
-    {
-      title: "Mr. Tej Bdr. Karki",
-      image: "../../assets/images/member3.jpg",
-      desc: "James M. Beck was a member of the Republican Party, who served as U.S. Solicitor General and U.S. Representative from Pennsylvania."
-    },
-  ]
-}
-
 export default class MainScreen extends Component {
 
   state = {
-    heading: "Our Partners"
+    heading: "Our Partners",
+    cards: [
+      {
+        title: "Ramhari Dhital",
+        image: "https://facebook.github.io/react-native/docs/assets/favicon.png",
+        desc: "Ramhari Dhital is known as a success man in finance industry in nepal. who protects his client’s interests as though they were his own."
+      },
+      {
+        title: "Mrs. Tulsi Dhital",
+        image: "https://i.kinja-img.com/gawker-media/image/upload/s--vSY-o42Q--/c_scale,f_auto,fl_progressive,q_80,w_800/ecq5rsk3n1nolujedskk.jpg",
+        desc: "Mrs. Tulsi Dhital  is responsible for the day to day operations or an organization. She could be thought of as the second in command behind the Chairman or CEO."
+      },
+      {
+        title: "Mr. Tej Bdr. Karki",
+        image: "https://facebook.github.io/react-native/docs/assets/favicon.png",
+        desc: "James M. Beck was a member of the Republican Party, who served as U.S. Solicitor General and U.S. Representative from Pennsylvania."
+      },
+    ]
   }
 
   render() {
@@ -60,7 +56,7 @@ export default class MainScreen extends Component {
           </Button>
         <WelcomeSection />
         <MembershipPlan />
-        <OurPartners heading={this.state.heading} card={this.state.cards}/>
+        <OurPartners heading={this.state.heading} cards={this.state.cards}/>
         </Content>
         </ScrollView>
       </Container>
