@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, CardItem, Text, Container, Content } from "native-base";
 import { StyleSheet, Image } from "react-native";
 
-class Members extends Component {
+class SharedCard extends Component {
   render() {
   console.log(this.props)
     return (
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Members;
+export default SharedCard;

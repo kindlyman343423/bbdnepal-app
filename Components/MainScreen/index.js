@@ -19,7 +19,7 @@ import Slider from "./Slider";
 import WelcomeSection from "./WelcomeSection";
 import { ScrollView } from "react-native-gesture-handler";
 import MembershipPlan from "./MembershipPlan";
-import OurPartners from "../AboutUsScreen/Members";
+import OurPartners from "../shared/SharedCard";
 
 export default class MainScreen extends Component {
 

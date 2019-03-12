@@ -6,7 +6,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import Head from "../shared/Head";
 
 import BulletPoints from "./BulletPoints";
-import Members from "./Members";
+import Members from "../shared/SharedCard";
 
 class AboutUsScreen extends Component {
 
