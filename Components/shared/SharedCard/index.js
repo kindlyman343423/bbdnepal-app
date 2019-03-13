@@ -7,10 +7,13 @@ class SharedCard extends Component {
 
   state = {
     modalVisible: false,
+    currentmember: 0
   };
 
-  setModalVisible =(visible) => {
+  setModalVisible =(visible, i) => {
+    console.log(i);
     this.setState({modalVisible: visible});
+    this.setState({currentmember: i});
   }
 
   render() {
@@ -20,12 +23,12 @@ class SharedCard extends Component {
             <Text style={styles.title}>{this.props.heading}</Text>
           </CardItem>
 
+          <ModalCard modalVisible={this.state.modalVisible} setModalVisible={this.setModalVisible} member={this.props.cards[this.state.currentmember]}/>
 
           {this.props.cards &&
             this.props.cards.map((member, i) => (
               <Content key={i}>
-              <ModalCard modalVisible={this.state.modalVisible} setModalVisible={this.setModalVisible}/>
-              <TouchableNativeFeedback onPress={() => this.setModalVisible(true)}>
+              <TouchableNativeFeedback onPress={() => this.setModalVisible(true, i)}>
 
                 <CardItem cardBody>
                   <Image
