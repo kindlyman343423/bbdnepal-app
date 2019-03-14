@@ -4,6 +4,16 @@ import { StatusBar, Platform, StyleSheet } from "react-native";
 import ActionScreen from "./ActionScreen";
 
 export default class Head extends Component {
+
+  renderTitle = () =>{
+    if (this.props.navigation.state.key === "Home"){
+      return "BBD NEPAL"
+    }else{
+      return this.props.navigation.state.key
+    }
+  }
+
+
   render() {
     return (
       <Header
@@ -21,7 +31,7 @@ export default class Head extends Component {
           </Button>
         </Left>
         <Body>
-          <Title>BBD NEPAL</Title>
+          <Title>{this.renderTitle()}</Title>
         </Body>
 
         <Right>

@@ -114,7 +114,7 @@ export default class drawerContentComponents extends Component {
             <View style={styles.screenStyle}>
             {
                activeItemKey === "ContactUs" ? (
-                <Text style={{fontWeight: "bold"}}>ContactUs</Text>
+                <Text style={{fontWeight: "bold"}}>Contact Us</Text>
                ): (
                 <Text>ContactUs</Text>
                )
