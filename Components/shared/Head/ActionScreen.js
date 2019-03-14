@@ -40,7 +40,7 @@ export default class ActionScreen extends Component {
     return (
       <Root>
         <Button
-         style={{marginLeft: Dimensions.get('window').width/4}}
+         style={{marginLeft: Dimensions.get('window').width/4 + 15}}
           transparent
           onPress={() =>
             ActionSheet.show(

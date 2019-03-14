@@ -16,14 +16,12 @@ export default class ModalCard extends Component {
         }}
       >
           <Content>
-            <TouchableNativeFeedback onPress={() => this.setModalVisible(true, 0)}>
               <CardItem cardBody>
                 <Image
                   source={{ uri: `${this.props.member.image}` }}
                   style={styles.image}
                 />
               </CardItem>
-            </TouchableNativeFeedback>
             <CardItem>
               <Text style={{ fontSize: 20 }}>{this.props.member.title}</Text>
             </CardItem>

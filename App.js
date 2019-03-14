@@ -12,6 +12,8 @@ import CareerScreen from './Components/CareerScreen';
 import FAQScreen from './Components/FAQScreen';
 import ContactUsScreen from './Components/ContactUsScreen';
 
+import drawerContentComponents from './Components/drawerContentComponents';
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -48,7 +50,7 @@ const RootDrawerNavigator = createDrawerNavigator({
   FAQ: FAQScreen,
   ContactUs: ContactUsScreen,
 },{
-  initialRouteName: 'Home'
+    contentComponent: drawerContentComponents
 })
 
 const DrawerNav = createAppContainer(RootDrawerNavigator);
