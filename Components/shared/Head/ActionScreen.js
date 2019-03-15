@@ -4,6 +4,9 @@ import { Button, Icon, ActionSheet, Root } from "native-base";
 
 var BUTTONS = ["Facebook", "Twitter", "LinkedIn"];
 
+import FAIcons from 'react-native-vector-icons/FontAwesome';
+
+
 export default class ActionScreen extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +47,8 @@ export default class ActionScreen extends Component {
             )
           }
         >
-          <Icon name="more" style={{ color: "white" }} />
+          <FAIcons name="users" style={{color: "white", fontSize: 20}}/>
+          {/* <Icon name="more" style={{ color: "white" }} /> */}
         </Button>
       </Root>
     );
