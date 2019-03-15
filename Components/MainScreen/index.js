@@ -20,6 +20,7 @@ import WelcomeSection from "./WelcomeSection";
 import { ScrollView } from "react-native-gesture-handler";
 import MembershipPlan from "./MembershipPlan";
 import OurPartners from "../shared/SharedCard";
+import JoinUs from "./JoinUs";
 
 export default class MainScreen extends Component {
 
@@ -51,9 +52,7 @@ export default class MainScreen extends Component {
         <ScrollView>
         <Content style={{ backgroundColor: "#d5d5d6" }}>
           <Slider />
-          <Button block style={styles.button}>
-            <Text>Join Us</Text>
-          </Button>
+          <JoinUs />
         <WelcomeSection />
         <MembershipPlan />
         <OurPartners heading={this.state.heading} cards={this.state.cards}/>
