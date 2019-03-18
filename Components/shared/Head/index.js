@@ -8,8 +8,12 @@ export default class Head extends Component {
   renderTitle = () =>{
     if (this.props.navigation.state.key === "Home"){
       return "BBD NEPAL"
-    }else{
-      return this.props.navigation.state.key
+    }
+    else if (this.props.navigation.state.key === "FAQ"){
+      return "FAQ"
+    }
+    else{
+      return this.props.navigation.state.key.match(/[A-Z][a-z]+|[0-9]+/g).join(" ") //Get the screen name and add space between it
     }
   }
 

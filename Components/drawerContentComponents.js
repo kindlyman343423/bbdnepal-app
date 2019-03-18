@@ -116,7 +116,7 @@ export default class drawerContentComponents extends Component {
                activeItemKey === "ContactUs" ? (
                 <Text style={{fontWeight: "bold"}}>Contact Us</Text>
                ): (
-                <Text>ContactUs</Text>
+                <Text>Contact Us</Text>
                )
               }
             </View>

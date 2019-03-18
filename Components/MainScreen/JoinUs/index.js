@@ -7,14 +7,11 @@ import FormModal from './FormModal';
 
 class JoinUs extends Component {
   state = {
-    modalVisible: false,
-    currentmember: 0
+    modalVisible: true,
   };
 
   setModalVisible = (visible, i) => {
-    console.log(i);
     this.setState({ modalVisible: visible });
-    this.setState({ currentmember: i });
   };
 
   render() {
