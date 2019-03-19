@@ -20,7 +20,11 @@ import { ScrollView } from "react-native-gesture-handler";
 export default class FormModal extends Component {
   constructor(props) {
     super(props);
-    this.state = { chosenDate: new Date(), genderSelect: "male", maritalStatusSelect: "married" };
+    this.state = {
+      chosenDate: new Date(),
+      genderSelect: "male",
+      maritalStatusSelect: "married"
+    };
     this.setDate = this.setDate.bind(this);
   }
 
@@ -34,11 +38,11 @@ export default class FormModal extends Component {
     });
   };
 
-  onMaritalStatusValueChange = value =>{
+  onMaritalStatusValueChange = value => {
     this.setState({
       maritalStatusSelect: value
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -50,10 +54,8 @@ export default class FormModal extends Component {
           this.props.setModalVisible(!this.props.modalVisible);
         }}
       >
-        <ScrollView>
-          <Container
-            style={{ alignContent: "center", justifyContent: "center" }}
-          >
+        <Container style={{ alignContent: "center", justifyContent: "center" }}>
+          <ScrollView>
             <Content>
               <Text style={styles.title}>Application Form</Text>
               <Form style={styles.form}>
@@ -146,9 +148,30 @@ export default class FormModal extends Component {
                 </Item>
 
                 <Label style={styles.label}>Permanent Address</Label>
-                <Item rounded last style={[styles.input, styles.splitinput]}>
-                  <Input />
-                </Item>
+
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: "row",
+                    justifyContent: "space-between"
+                  }}
+                >
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    District"} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    VDC/Municiplity"} />
+                  </Item>
+                </View>
+
+                <View style={{ flex: 1, flexDirection: "row" }}>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    Ward No."} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    Tole"} />
+                  </Item>
+                </View>
 
                 <View style={{ marginTop: 10, flex: 1, padding: 10 }}>
                   <Button
@@ -166,8 +189,8 @@ export default class FormModal extends Component {
                 </View>
               </Form>
             </Content>
-          </Container>
-        </ScrollView>
+          </ScrollView>
+        </Container>
       </Modal>
     );
   }
@@ -193,8 +216,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     height: 40
   },
-  splitinput:{
-    width: '25%'
+  splitinput: {
+    flex: 1,
+    width: 50
   },
   label: {
     fontWeight: "bold",
