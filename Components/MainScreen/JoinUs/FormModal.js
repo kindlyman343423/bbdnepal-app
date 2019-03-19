@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Modal, StyleSheet } from "react-native";
 
+import FAIcons from 'react-native-vector-icons/FontAwesome';
+
 import {
   Form,
   Item,
@@ -13,7 +15,8 @@ import {
   Container,
   DatePicker,
   Icon,
-  Picker
+  Picker,
+  Right
 } from "native-base";
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -57,6 +60,7 @@ export default class FormModal extends Component {
         <Container style={{ alignContent: "center", justifyContent: "center" }}>
           <ScrollView>
             <Content>
+              <FAIcons onPress={()=> this.props.setModalVisible(!this.props.modalVisible)} style={{color: 'red', textAlign: 'right', marginRight: 15, marginTop: 5, fontSize: 20}}  name="times"/>
               <Text style={styles.title}>Application Form</Text>
               <Form style={styles.form}>
                 <Label style={styles.label}>First Name</Label>
@@ -173,6 +177,55 @@ export default class FormModal extends Component {
                   </Item>
                 </View>
 
+                <Label style={styles.label}>Contact Address</Label>
+
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: "row",
+                    justifyContent: "space-between"
+                  }}
+                >
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    District"} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    VDC/Municiplity"} />
+                  </Item>
+                </View>
+
+                <View style={{ flex: 1, flexDirection: "row" }}>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    Ward No."} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.splitinput]}>
+                    <Input placeholder={"    Tole"} />
+                  </Item>
+                </View>
+
+                <Label style={styles.label}>Contact Number</Label>
+                <View style={{ flex: 1, flexDirection: "row" }}>
+                <Item rounded last style={[styles.input, styles.triplesplit]}>
+                  <Input placeholder={"    Residence"} />
+                </Item>
+                <Item rounded last style={[styles.input, styles.triplesplit]}>
+                  <Input placeholder={"    Office"} />
+                </Item>
+                <Item rounded last style={[styles.input, styles.triplesplit]}>
+                  <Input placeholder={"    Mobile"} />
+                </Item>
+                </View>
+
+                <Label style={styles.label}>E-mail</Label>
+                <Item rounded last style={styles.input}>
+                  <Input />
+                </Item>
+
+                <Label style={styles.label}>P.O. Box No.</Label>
+                <Item rounded last style={styles.input}>
+                  <Input />
+                </Item>
+
                 <View style={{ marginTop: 10, flex: 1, padding: 10 }}>
                   <Button
                     block
@@ -203,7 +256,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlignVertical: "center",
     textAlign: "center",
-    marginTop: 10
+    marginTop: -5
   },
   contact: {
     flex: 1
@@ -219,6 +272,10 @@ const styles = StyleSheet.create({
   splitinput: {
     flex: 1,
     width: 50
+  },
+  triplesplit:{
+    flex: 1,
+    width: 33.33
   },
   label: {
     fontWeight: "bold",
