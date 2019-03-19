@@ -22,27 +22,37 @@ export default class FormExample extends Component {
           <Content>
             <Text style={styles.title}>Contact Us</Text>
             <Form>
-              <Item regular last style={styles.input}>
-                <Input placeholder="First Name*" />
+              <Label style={styles.label}>First Name*</Label>
+              <Item rounded last style={styles.input}>
+                <Input />
               </Item>
-              <Item regular last style={styles.input}>
-                <Input placeholder="Last Name*" />
+              
+              <Label style={styles.label}>Last Name*</Label>
+              <Item rounded last style={styles.input}>
+                <Input />
               </Item>
-              <Item regular last style={styles.input}>
-                <Input placeholder="Email*" />
+              
+              <Label style={styles.label}>Email*</Label>
+              <Item rounded last style={styles.input}>
+                <Input />
               </Item>
-              <Item regular last style={styles.input}>
-                <Input placeholder="Phone Number*" />
+              
+              <Label style={styles.label}>Phone Number*</Label>
+              <Item rounded last style={styles.input}>
+                <Input />
               </Item>
-              <Item regular last style={styles.input}>
-                <Input placeholder="Subject" />
+              
+              <Label style={styles.label}>Subject</Label>
+              <Item rounded last style={styles.input}>
+                <Input />
               </Item>
-              <Textarea
-                style={{ marginTop: 20 }}
-                rowSpan={5}
-                bordered
-                placeholder="Message"
-              />
+
+              <Label style={styles.label}>Message</Label>
+              <Item rounded last style={[styles.input, styles.textArea]}>
+               <Input />
+              </Item>
+              
+              
                 <View style={{ marginTop: 10, flex: 1, padding: 10 }}>
                   <Button
                     block
@@ -50,7 +60,8 @@ export default class FormExample extends Component {
                       width: "100%",
                       marginTop: 10,
                       justifyContent: "center",
-                      backgroundColor: "#00814e"
+                      backgroundColor: "#00814e",
+                      borderRadius: 20
                     }}
                   >
                     <Text style={{ color: "white" }}> Send Message </Text>
@@ -72,10 +83,19 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     textAlign: "center"
   },
+  label: {
+    fontWeight: "bold",
+    marginTop: 10,
+    marginLeft: 15
+  },
   contact: {
     flex: 1
   },
   input: {
-    margin: 10
+    marginTop: 10,
+    height: 40
+  },
+  textArea:{
+    height: 100
   }
 });

@@ -7,7 +7,7 @@ import FormModal from './FormModal';
 
 class JoinUs extends Component {
   state = {
-    modalVisible: true,
+    modalVisible: false,
   };
 
   setModalVisible = (visible, i) => {

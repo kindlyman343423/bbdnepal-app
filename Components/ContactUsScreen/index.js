@@ -31,8 +31,8 @@ class ContactUsScreen extends Component {
               </CardItem>
             </Card>
             <Card>
-              <CardItem style={{flex: 1}}>
-                <ContactForm flexContact={styles.contact}/>
+              <CardItem >
+                <ContactForm />
               </CardItem>
             </Card>
           </Content>
@@ -43,15 +43,7 @@ class ContactUsScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 20,
-    color: "#122e8c",
-    flex: 1,
-    textAlignVertical: "center",textAlign: "center"
-  },
-  contact: {
-   flex: 1
-  }
+
 });
 
 export default ContactUsScreen;

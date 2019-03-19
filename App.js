@@ -42,13 +42,13 @@ export default class App extends React.Component {
 }
 
 const RootDrawerNavigator = createDrawerNavigator({
+  ContactUs: ContactUsScreen,
   Home: MainScreen,
   AboutUs: AboutUsScreen,
   OurService: OurServiceScreen,
   LegalNews: LegalNewsScreen,
   Career: CareerScreen,
   FAQ: FAQScreen,
-  ContactUs: ContactUsScreen,
 },{
     contentComponent: drawerContentComponents
 })
