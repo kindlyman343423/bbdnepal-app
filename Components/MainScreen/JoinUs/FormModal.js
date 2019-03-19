@@ -188,7 +188,7 @@ export default class FormModal extends Component {
                 >
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    District"} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    VDC/Municiplity"} />
                   </Item>
@@ -197,7 +197,7 @@ export default class FormModal extends Component {
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    Ward No."} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    Tole"} />
                   </Item>
@@ -214,7 +214,7 @@ export default class FormModal extends Component {
                 >
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    District"} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    VDC/Municiplity"} />
                   </Item>
@@ -223,7 +223,7 @@ export default class FormModal extends Component {
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    Ward No."} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.splitinput]}>
                     <Input placeholder={"    Tole"} />
                   </Item>
@@ -233,10 +233,10 @@ export default class FormModal extends Component {
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Item rounded last style={[styles.input, styles.triplesplit]}>
                     <Input placeholder={"    Residence"} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.triplesplit]}>
                     <Input placeholder={"    Office"} />
-                  </Item>
+                  </Item><Text>{"  "}</Text>
                   <Item rounded last style={[styles.input, styles.triplesplit]}>
                     <Input placeholder={"    Mobile"} />
                   </Item>
@@ -291,7 +291,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlignVertical: "center",
     textAlign: "center",
-    marginTop: -5
+    marginTop: -10
   },
   contact: {
     flex: 1
