@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Modal, StyleSheet } from "react-native";
+import { Modal, StyleSheet, Image } from "react-native";
 
-import FAIcons from 'react-native-vector-icons/FontAwesome';
+import FAIcons from "react-native-vector-icons/FontAwesome";
 
 import {
   Form,
@@ -15,10 +15,11 @@ import {
   Container,
   DatePicker,
   Icon,
-  Picker,
-  Right
+  Picker
 } from "native-base";
 import { ScrollView } from "react-native-gesture-handler";
+
+import { ImagePicker } from "expo";
 
 export default class FormModal extends Component {
   constructor(props) {
@@ -26,7 +27,8 @@ export default class FormModal extends Component {
     this.state = {
       chosenDate: new Date(),
       genderSelect: "male",
-      maritalStatusSelect: "married"
+      maritalStatusSelect: "married",
+      image: null
     };
     this.setDate = this.setDate.bind(this);
   }
@@ -47,7 +49,19 @@ export default class FormModal extends Component {
     });
   };
 
+  _pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [4, 3]
+    });
+
+    if (!result.cancelled) {
+      this.setState({ image: result.uri });
+    }
+  };
+
   render() {
+    let { image } = this.state;
     return (
       <Modal
         animationType="slide"
@@ -60,7 +74,19 @@ export default class FormModal extends Component {
         <Container style={{ alignContent: "center", justifyContent: "center" }}>
           <ScrollView>
             <Content>
-              <FAIcons onPress={()=> this.props.setModalVisible(!this.props.modalVisible)} style={{color: 'red', textAlign: 'right', marginRight: 15, marginTop: 5, fontSize: 20}}  name="times"/>
+              <FAIcons
+                onPress={() =>
+                  this.props.setModalVisible(!this.props.modalVisible)
+                }
+                style={{
+                  color: "red",
+                  textAlign: "right",
+                  marginRight: 15,
+                  marginTop: 5,
+                  fontSize: 20
+                }}
+                name="times"
+              />
               <Text style={styles.title}>Application Form</Text>
               <Form style={styles.form}>
                 <Label style={styles.label}>First Name</Label>
@@ -205,15 +231,15 @@ export default class FormModal extends Component {
 
                 <Label style={styles.label}>Contact Number</Label>
                 <View style={{ flex: 1, flexDirection: "row" }}>
-                <Item rounded last style={[styles.input, styles.triplesplit]}>
-                  <Input placeholder={"    Residence"} />
-                </Item>
-                <Item rounded last style={[styles.input, styles.triplesplit]}>
-                  <Input placeholder={"    Office"} />
-                </Item>
-                <Item rounded last style={[styles.input, styles.triplesplit]}>
-                  <Input placeholder={"    Mobile"} />
-                </Item>
+                  <Item rounded last style={[styles.input, styles.triplesplit]}>
+                    <Input placeholder={"    Residence"} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.triplesplit]}>
+                    <Input placeholder={"    Office"} />
+                  </Item>
+                  <Item rounded last style={[styles.input, styles.triplesplit]}>
+                    <Input placeholder={"    Mobile"} />
+                  </Item>
                 </View>
 
                 <Label style={styles.label}>E-mail</Label>
@@ -225,6 +251,15 @@ export default class FormModal extends Component {
                 <Item rounded last style={styles.input}>
                   <Input />
                 </Item>
+
+                <Label style={styles.label}>Upload Photo</Label>
+                <Item
+                  rounded
+                  last
+                  style={styles.input}
+                  onPress={this._pickImage}
+                />
+                {image && <Image source={{ uri: image }} style={styles.image} />}
 
                 <View style={{ marginTop: 10, flex: 1, padding: 10 }}>
                   <Button
@@ -273,7 +308,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 50
   },
-  triplesplit:{
+  triplesplit: {
     flex: 1,
     width: 33.33
   },
@@ -281,5 +316,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 10,
     marginLeft: 15
+  },
+  image: {
+    width: 200,
+    height: 200,
+    marginTop: 10
   }
 });
