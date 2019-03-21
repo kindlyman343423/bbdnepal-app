@@ -11,6 +11,7 @@
   "dependencies": {
     "expo": "^31.0.2",
     "expo-cli": "^2.11.6",
+    "firebase": "^5.9.0",
     "global": "^4.3.2",
     "native-base": "2.8.2",
     "react": "16.5.0",

@@ -14,6 +14,10 @@ import ContactUsScreen from './Components/ContactUsScreen';
 
 import drawerContentComponents from './Components/drawerContentComponents';
 
+// import firebase from './config/firebase';
+import firebase from 'firebase';
+
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -27,6 +31,19 @@ export default class App extends React.Component {
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
     });
     this.setState({ loading: false });
+  }
+
+  componentDidMount(){
+    // firebase.initializeFirebase();
+    const config = {
+      apiKey: "AIzaSyARXJnsMCgrlq2ZEbjRokBZhxxvtpt99EY",
+      authDomain: "bbdnepal-f5d92.firebaseapp.com",
+      databaseURL: "https://bbdnepal-f5d92.firebaseio.com",
+      projectId: "bbdnepal-f5d92",
+      storageBucket: "bbdnepal-f5d92.appspot.com",
+      messagingSenderId: "558448678081"
+    };
+    firebase.initializeApp(config);
   }
 
   render() {
