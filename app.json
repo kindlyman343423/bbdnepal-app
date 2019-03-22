@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "bbdnepal_v1",
+    "name": "bbdnepal",
     "description": "This project is really great.",
-    "slug": "bbdnepal_v1",
+    "slug": "bbdnepal",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],
@@ -12,7 +12,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00814e"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
