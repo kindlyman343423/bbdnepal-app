@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Text, View, Modal, TouchableNativeFeedback, Image, StyleSheet } from "react-native";
 import { Card, CardItem, Container, Content, Button } from "native-base";
 
-
 export default class ModalCard extends Component {
   render() {
    console.log(this.props)
