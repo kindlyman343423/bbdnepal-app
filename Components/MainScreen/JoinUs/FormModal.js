@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, StyleSheet, Image } from "react-native";
+import { Modal, StyleSheet, Image, Platform } from "react-native";
 
 import FAIcons from "react-native-vector-icons/FontAwesome";
 
@@ -137,7 +137,7 @@ export default class FormModal extends Component {
       >
         <Container style={{ alignContent: "center", justifyContent: "center" }}>
           <ScrollView>
-            <Content>
+            <Content style={styles.content}>
               <FAIcons
                 onPress={() =>
                   this.props.setModalVisible(!this.props.modalVisible)
@@ -248,7 +248,7 @@ export default class FormModal extends Component {
                   <Picker
                     mode="dropdown"
                     iosHeader="Gender"
-                    iosIcon={<Icon name="arrow-down" />}
+                    iosIcon={<Icon name="ios-arrow-down" />}
                     style={{ width: undefined }}
                     selectedValue={this.state.genderSelect}
                     onValueChange={this.onGenderValueChange}
@@ -264,7 +264,7 @@ export default class FormModal extends Component {
                   <Picker
                     mode="dropdown"
                     iosHeader="Marital Status"
-                    iosIcon={<Icon name="arrow-down" />}
+                    iosIcon={<Icon name="ios-arrow-down" />}
                     style={{ width: undefined }}
                     selectedValue={this.state.maritalStatusSelect}
                     onValueChange={this.onMaritalStatusValueChange}
@@ -535,6 +535,16 @@ export default class FormModal extends Component {
 }
 
 const styles = StyleSheet.create({
+  content:{
+    ...Platform.select({
+      android:{
+        marginTop: 5
+      },
+      ios:{
+        marginTop: 20
+      }
+    })
+  },
   title: {
     fontSize: 20,
     color: "#122e8c",

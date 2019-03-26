@@ -12,7 +12,7 @@ class FAQScreen extends Component {
       <Container>
       <Head {...this.props}/>
       <Content padder>
-        <Accordion dataArray={dataArray} icon="add" expandedIcon="remove" expanded={true} animation={true}/>
+        <Accordion dataArray={dataArray} icon="ios-add" expandedIcon="ios-remove" expanded={true} animation={true}/>
       </Content>
     </Container>
     )

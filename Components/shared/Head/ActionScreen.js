@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Linking, Dimensions } from "react-native";
+import { Text, View, Linking, Dimensions, StyleSheet, Platform } from "react-native";
 import { Button, Icon, ActionSheet, Root } from "native-base";
 
 var BUTTONS = ["Facebook", "Twitter", "LinkedIn"];
@@ -33,7 +33,7 @@ export default class ActionScreen extends Component {
     return (
       <Root>
         <Button
-          style={{ marginLeft: Dimensions.get("window").width / 4 + 15 }}
+          style={styles.usersButton}
           transparent
           onPress={() =>
             ActionSheet.show(
@@ -54,3 +54,17 @@ export default class ActionScreen extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  usersButton:{
+    ...Platform.select({
+      android: {
+        marginLeft: Dimensions.get("window").width / 4 + 15 
+      },
+      ios:{
+        marginLeft: Dimensions.get("window").width / 4 + 5
+      }
+    })
+     
+  }
+})

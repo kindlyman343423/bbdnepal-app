@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Header, Title, Button, Left, Right, Body, Icon, Root } from "native-base";
-import { StatusBar, Platform, StyleSheet } from "react-native";
+import { Header, Title, Button, Left, Right, Body, Root } from "native-base";
+import { StatusBar, Platform, StyleSheet, Icon } from "react-native";
 import ActionScreen from "./ActionScreen";
+
+import {Ionicons} from '@expo/vector-icons';
 
 export default class Head extends Component {
 
@@ -31,13 +33,12 @@ export default class Head extends Component {
             transparent
             onPress={() => this.props.navigation.openDrawer()}
           >
-            <Icon name="menu" />
+            <Ionicons name="ios-menu" style={{color: "white", fontSize: 20}}/>
           </Button>
         </Left>
         <Body>
-          <Title>{this.renderTitle()}</Title>
+          <Title style={styles.IOStitleColor}>{this.renderTitle()}</Title>
         </Body>
-
         <Right>
           <ActionScreen />
         </Right>
@@ -56,6 +57,13 @@ const styles = StyleSheet.create({
     ...Platform.select({
       android: {
         paddingTop: StatusBar.currentHeight
+      }
+    })
+  },
+  IOStitleColor:{
+    ...Platform.select({
+      ios: {
+        color: 'white'
       }
     })
   }
