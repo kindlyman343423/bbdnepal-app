@@ -9,6 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^31.0.2",
     "expo-cli": "^2.11.6",
     "firebase": "^5.9.0",
