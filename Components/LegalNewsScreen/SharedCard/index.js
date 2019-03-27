@@ -70,7 +70,7 @@ class SharedCard extends Component {
                 <Text style={{ fontSize: 20 }}>{member.title.rendered}</Text>
               </CardItem>
               <CardItem>
-                <Text>{member.excerpt.rendered}</Text>
+                <Text>{member.excerpt.rendered+"READ MORE..."}</Text>
               </CardItem>
             </Content>
           ))}
