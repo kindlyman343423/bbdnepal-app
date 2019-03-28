@@ -18,13 +18,11 @@ class SharedCard extends Component {
   };
 
   setModalVisible = (visible, i) => {
-    console.log(i);
     this.setState({ modalVisible: visible });
     this.setState({ currentmember: i });
   };
 
   render() {
-    console.log(this.props);
     return (
       <Card>
         <CardItem
@@ -37,7 +35,7 @@ class SharedCard extends Component {
         <ModalCard
           modalVisible={this.state.modalVisible}
           setModalVisible={this.setModalVisible}
-          member={this.props.cards[this.state.currentmember]}
+          member={this.props.data[this.state.currentmember]}
         />
 
         {this.props.data &&
@@ -70,7 +68,7 @@ class SharedCard extends Component {
                 <Text style={{ fontSize: 20 }}>{member.title.rendered}</Text>
               </CardItem>
               <CardItem>
-                <Text>{member.excerpt.rendered+"READ MORE..."}</Text>
+                <Text>{member.excerpt.rendered.replace(/(<([^>]+)>)/ig, '')+"READ MORE..."}</Text>
               </CardItem>
             </Content>
           ))}
