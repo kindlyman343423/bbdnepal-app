@@ -31,7 +31,7 @@ export default class ModalCard extends Component {
           <CardItem>
             {this.props.member && (
               <Text style={{ fontSize: 20 }}>
-                {this.props.member.title.rendered}
+                {this.props.member.title.rendered.toString().replace("#038;", "")}
               </Text>
             )}
           </CardItem>

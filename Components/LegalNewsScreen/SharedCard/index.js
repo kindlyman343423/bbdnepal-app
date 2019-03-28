@@ -51,7 +51,7 @@ class SharedCard extends Component {
                   </CardItem>
                   <CardItem>
                     <Text style={{ fontSize: 20 }}>
-                      {member.title.rendered}
+                      {member.title.rendered.toString().replace("#038;", "")}
                     </Text>
                   </CardItem>
                   <CardItem>
@@ -62,8 +62,8 @@ class SharedCard extends Component {
                   </CardItem>
                   <CardItem>
                     <Text>
-                      {member.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")+'\n'}
-                      <Text style={{ color: "blue", paddingTop: -25 }}>READ MORE...</Text>
+                      {member.excerpt.rendered.replace(/(<([^>]+)>)/gi, "").toString().replace("&#8230;", "")+'\n'}
+                      <Text style={{ color: "blue", paddingTop: -25 }}>READ MORE</Text>
                     </Text>                      
                     </CardItem>
                 </>
