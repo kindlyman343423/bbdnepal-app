@@ -41,35 +41,33 @@ class SharedCard extends Component {
         {this.props.data &&
           this.props.data.map((member, i) => (
             <Content key={i}>
-              {Platform.OS === "ios" ? (
-                <TouchableHighlight
-                  onPress={() => this.setModalVisible(true, i)}
-                >
+              <TouchableHighlight onPress={() => this.setModalVisible(true, i)}>
+                <>
                   <CardItem cardBody>
                     <Image
                       source={{ uri: "https://i.ibb.co/vJhCQpH/member3.png" }}
                       style={styles.image}
                     />
                   </CardItem>
-                </TouchableHighlight>
-              ) : (
-                <TouchableNativeFeedback
-                  onPress={() => this.setModalVisible(true, i)}
-                >
-                  <CardItem cardBody>
-                    <Image
-                      source={{ uri: "https://i.ibb.co/vJhCQpH/member3.png" }}
-                      style={styles.image}
-                    />
+                  <CardItem>
+                    <Text style={{ fontSize: 20 }}>
+                      {member.title.rendered}
+                    </Text>
                   </CardItem>
-                </TouchableNativeFeedback>
-              )}
-              <CardItem>
-                <Text style={{ fontSize: 20 }}>{member.title.rendered}</Text>
-              </CardItem>
-              <CardItem>
-                <Text>{member.excerpt.rendered.replace(/(<([^>]+)>)/ig, '')+"READ MORE..."}</Text>
-              </CardItem>
+                  <CardItem>
+                    <Text style={{ fontSize: 12, marginTop: -15 }}>
+                      {"POSTED ON- " +
+                        new Date(member.date).toLocaleString().split(",")[0]}
+                    </Text>
+                  </CardItem>
+                  <CardItem>
+                    <Text>
+                      {member.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")+'\n'}
+                      <Text style={{ color: "blue", paddingTop: -25 }}>READ MORE...</Text>
+                    </Text>                      
+                    </CardItem>
+                </>
+              </TouchableHighlight>
             </Content>
           ))}
       </Card>

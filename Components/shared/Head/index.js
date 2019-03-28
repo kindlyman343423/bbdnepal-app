@@ -33,7 +33,7 @@ export default class Head extends Component {
             transparent
             onPress={() => this.props.navigation.openDrawer()}
           >
-            <Ionicons name="ios-menu" style={{color: "white", fontSize: 20}}/>
+            <Ionicons name="ios-menu" style={styles.menuIcon}/>
           </Button>
         </Left>
         <Body>
@@ -64,6 +64,14 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         color: 'white'
+      }
+    })
+  },
+  menuIcon:{
+    color: "white", fontSize: 20, 
+    ...Platform.select({
+      ios: {
+        padding: 10
       }
     })
   }

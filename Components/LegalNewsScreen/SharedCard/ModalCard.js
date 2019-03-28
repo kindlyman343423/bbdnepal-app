@@ -37,9 +37,23 @@ export default class ModalCard extends Component {
           </CardItem>
           <CardItem>
             {this.props.member && (
-              <Text>{this.props.member.content.rendered.replace(/(<([^>]+)>)/ig, '')}</Text>
+              <Text style={{ fontSize: 12, marginTop: -15 }}>
+                {"POSTED ON- " +
+                  new Date(this.props.member.date).toLocaleString().split(",")[0]}
+              </Text>
             )}
           </CardItem>
+          <CardItem>
+            {this.props.member && (
+              <Text>
+                {this.props.member.content.rendered.replace(
+                  /(<([^>]+)>)/gi,
+                  ""
+                )}
+              </Text>
+            )}
+          </CardItem>
+         
         </Content>
       </Modal>
     );
