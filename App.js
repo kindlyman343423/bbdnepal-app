@@ -59,10 +59,10 @@ export default class App extends React.Component {
 }
 
 const RootDrawerNavigator = createDrawerNavigator({
-  LegalNews: LegalNewsScreen,
+  OurService: OurServiceScreen,
   Home: MainScreen,
   AboutUs: AboutUsScreen,
-  OurService: OurServiceScreen,
+  LegalNews: LegalNewsScreen,
   Career: CareerScreen,
   FAQ: FAQScreen,
   ContactUs: ContactUsScreen,
