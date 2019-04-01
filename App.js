@@ -59,9 +59,9 @@ export default class App extends React.Component {
 }
 
 const RootDrawerNavigator = createDrawerNavigator({
-  OurService: OurServiceScreen,
   Home: MainScreen,
   AboutUs: AboutUsScreen,
+  OurService: OurServiceScreen,
   LegalNews: LegalNewsScreen,
   Career: CareerScreen,
   FAQ: FAQScreen,
