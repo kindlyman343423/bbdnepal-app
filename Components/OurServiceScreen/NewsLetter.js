@@ -13,7 +13,7 @@ class NewsLetter extends Component {
             </Item>
             <Button block style={styles.button}>
                   <Text style={{ color: "white" }}>SUBSCRIBE </Text>
-                </Button>
+            </Button>
           </Form>
         </Content>
       </Container>
@@ -23,19 +23,20 @@ class NewsLetter extends Component {
 
 const styles = StyleSheet.create({
  container: {
-   flex: 1
+   flex: 1,
+   backgroundColor: 'red'
  },
   input: {
     flexBasis: 20,
     marginTop: 10,
     height: 40,
     width: "60%",
-    margin: 10
+    margin: 10,
+    backgroundColor: 'blue',
   },
   button: {
    width: "35%",
    marginTop: 10,
-   justifyContent: "center",
    backgroundColor: "#00814e",
    borderRadius: 20
  },

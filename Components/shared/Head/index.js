@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     })
   },
   menuIcon:{
-    color: "white", fontSize: 20, 
+    color: "white", fontSize: 30, 
     ...Platform.select({
       ios: {
         padding: 10

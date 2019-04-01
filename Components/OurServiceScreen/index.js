@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Content, Accordion } from "native-base";
 import Head from "../shared/Head";
-import NewsLetter from './NewsLetter';
+// import NewsLetter from './NewsLetter';
 import {StyleSheet} from 'react-native';
 
 const dataArray = [
@@ -26,7 +26,7 @@ class OurServiceScreen extends Component {
         <Accordion dataArray={dataArray} icon="ios-add" expandedIcon="ios-remove" expanded={true} animation={true}/>
       </Content>
       </Container>
-      <NewsLetter />
+      {/* <NewsLetter /> */}
       </>
     )
   }
